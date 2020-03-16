@@ -1,4 +1,4 @@
----@---:~/elktest$ curl --user elastic:changeme -XGET "http://localhost:9200"\
+---@---:~/elktest$ curl --user elastic:changeme -XGET "http://localhost:9200"
 {
   "name" : "b306e3586970",
   "cluster_name" : "docker-cluster",
@@ -16,4 +16,3 @@
   },
   "tagline" : "You Know, for Search"
 }
-
