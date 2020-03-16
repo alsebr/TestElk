@@ -1,6 +1,6 @@
----@---:~/elktest$ curl --user elastic:changeme -XGET "http://localhost:9200"
-{
-  "name" : "b306e3586970",
+---@---:~/elktest$ curl --user elastic:changeme -XGET "http://localhost:9200"  
+{  
+  "name" : "b306e3586970",  
   "cluster_name" : "docker-cluster",
   "cluster_uuid" : "E_Z6Z3klQTm6v4ylGC7K1g",
   "version" : {
