@@ -17,7 +17,7 @@ spt=00000 src=99.99.99.99
 !!! Не смог понять, почему название хоста в предлагаемом событии "vnetids emerg" содержит пробел. Насколько я понял, это противоречит спецификации. Решил убрать пробел.
 
 Напоминалка по формату:
-Jan  18   11:07:53 host CEF:Version|Device Vendor|Device Product|Device Version|Device Event Class ID|Name|Severity|[Extension]
+```Jan  18   11:07:53 host CEF:Version|Device Vendor|Device Product|Device Version|Device Event Class ID|Name|Severity|[Extension]```
 
 5. Начинаем парсить:  
 ```
