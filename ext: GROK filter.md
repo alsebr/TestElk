@@ -23,7 +23,8 @@ Jan  18   11:07:53 host CEF:Version|Device Vendor|Device Product|Device Version|
 %{SYSLOGTIMESTAMP:syslog_time}
 %{HOSTNAME:syslog_hostname}
 Смотрим по спецификацию по версии:
->Version is  an integer and identifies the version of the CEF format. Event consumers use this information to determine what the following fields represent. The current CEF version is 0 (CEF:0).  
+>Version is  an integer and identifies the version of the CEF format. Event consumers use this information to determine what the following fields represent. The current CEF version is 0 (CEF:0).    
+ 
 CEF:%{INT:cef_version}
 
 6. Не забываем делиметр "|" экранировать.
