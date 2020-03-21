@@ -22,8 +22,10 @@ spt=00000 src=99.99.99.99
 Jan  18   11:07:53 host CEF:Version|Device Vendor|Device Product|Device Version|Device Event Class ID|Name|Severity|[Extension]
 
 5. Начинаем парсить:  
+```
 %{SYSLOGTIMESTAMP:syslog_time}  
 %{HOSTNAME:syslog_hostname}  
+```
 Смотрим спецификацию по версии:  
 >Version is  an integer and identifies the version of the CEF format. Event consumers use this information to determine what the following fields represent. The current CEF version is 0 (CEF:0).    
 ```
