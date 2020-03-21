@@ -62,7 +62,8 @@ SEVERITY Unknown|Low|Medium|High|Very-High|10|[0-9]
 10.
 >TheExtensionfield contains a collection of key-value pairs. The keys are part of a predefined set.The standard allows for including additional keys as   outlined in “ArcSight Extension Directory” later in this document.  An event can contain any number of key-value pairs in any order, separated by spaces ("  ")  
 
->If   a field contains a space, such as   a file name, this is valid and can be logged in exactly thatmanner, as   shown below
+>If   a field contains a space, such as   a file name, this is valid and can be logged in exactly thatmanner, as   shown below  
+ 
 ```%{GREEDYDATA:message}```  
  
 Здесь GROK пасует. Отдаем message на откуп Kv Filter    
