@@ -36,18 +36,19 @@ CEF:%{INT:cef_version}
 Вводим новый паттерн:  
 STRINGDELIM [^\|]+  
 Итого на данный момент:  
+'''
 %{SYSLOGTIMESTAMP:syslog_time} %{HOSTNAME:syslog_hostname} CEF:%{INT:cef_version}\|%{STRINGDELIM:device_vendor}\|%{STRINGDELIM:device_product}\|%{STRINGDELIM:device_version}
-
+'''
 7.
 >Device Event Class ID is  a unique identifier per event-type. This can be a string or an integer. Device Event Class ID identifies the type of event reported. In the intrusion detection system (IDS)world, each signature or rule that detects certain activity has a unique Device Event Class ID assigned. This is    a   requirement for other types of devices as   well, and helps correlation enginesprocess the events. Also known as Signature ID.
 
 Видимо, то же String, так-что:  
-%{STRINGDELIM:device_event_class_id}  
+'''%{STRINGDELIM:device_event_class_id}  '''
 
 8.
 >Name is    a   string representing a human-readable and understandable description of the event. The event name should not contain information that is specifically mentioned in other fields. For example: "Port scan from 10.0.0.1 targeting 20.1.1.1" is not a good event name. It should be: "Portscan". The other information is redundant and can be picked up from the other fields.
 
-%{STRINGDELIM:event_name}
+'''%{STRINGDELIM:event_name}'''
 
 9.
 >Severity is  a   string or integer and reflects the importance of the event. The valid string values are Unknown, Low, Medium, High, and Very-High. The valid integer values are 0-3=Low, 4-6=Medium, 7- 8=High, and 9-10=Very-High.
@@ -55,15 +56,13 @@ STRINGDELIM [^\|]+
 Доавляем новый паттерн:  
 Unknown|Low|Medium|High|Very-High|10|[0-9]  
 Получаем:  
-%{SEVERITY:severity}  
+'''%{SEVERITY:severity}  '''
 
 10.
 >TheExtensionfield contains a collection of key-value pairs. The keys are part of a predefined set.The standard allows for including additional keys as   outlined in “ArcSight Extension Directory” later in this document.  An event can contain any number of key-value pairs in any order, separated by spaces ("  ")  
 
 >If   a field contains a space, such as   a file name, this is valid and can be logged in exactly thatmanner, as   shown below
-
-%{GREEDYDATA:message}  
-
+'''%{GREEDYDATA:message}  '''
 Здесь GROK пасует. Отдаем message на откуп Kv Filter  
 
 Итого:  
