@@ -1,11 +1,9 @@
-1. Ищем 
-
-фикацию syslog CEF
-https://community.microfocus.com/t5/ArcSight-Connectors/ArcSight-Common-Event-Format-CEF-Implementation-Standard/ta-p/1645557?attachment-id=68077
-2. Открываем паттерны GROK
-https://github.com/elastic/logstash/blob/v1.4.2/patterns/grok-patterns
-3. Для дебага GROK используем:
-https://grokdebug.herokuapp.com/
+1. Ищем спецификацию syslog CEF  
+https://community.microfocus.com/t5/ArcSight-Connectors/ArcSight-Common-Event-Format-CEF-Implementation-Standard/ta-p/1645557?attachment-id=68077  
+2. Открываем паттерны GROK  
+https://github.com/elastic/logstash/blob/v1.4.2/patterns/grok-patterns  
+3. Для дебага GROK используем:  
+https://grokdebug.herokuapp.com/  
 4. Сообщение:
 ```
 Oct 21 15:12:07 vnetids emerg CEF:0|InfoTeCS|IDS|9.4.9-99999|1:2019401:27|ET POLICY Vulnerable
