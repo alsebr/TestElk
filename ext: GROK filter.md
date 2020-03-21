@@ -1,3 +1,4 @@
+## Пишем фильтр
 1. Ищем спецификацию syslog CEF  
 https://community.microfocus.com/t5/ArcSight-Connectors/ArcSight-Common-Event-Format-CEF-Implementation-Standard/ta-p/1645557?attachment-id=68077  
 2. Открываем паттерны GROK  
