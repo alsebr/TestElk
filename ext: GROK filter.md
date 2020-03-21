@@ -75,7 +75,8 @@ Java Version 1.8.x Detected|2|cat=1 cn1=1234567 cn1Label=EventID cnt=1 cs1=bad-u
 spt=00000 src=99.99.99.99
 ```
 ### GROK FILTER:
-```%{SYSLOGTIMESTAMP:syslog_time} %{HOSTNAME:syslog_hostname} CEF:%{INT:cef_version}\|%{STRINGDELIM:device_vendor}\|%{STRINGDELIM:device_product}\|%{STRINGDELIM:device_version}\|%{STRINGDELIM:device_event_class_id}\|%{STRINGDELIM:event_name}\|%{SEVERITY:severity}\|%{GREEDYDATA:message}
+```
+%{SYSLOGTIMESTAMP:syslog_time} %{HOSTNAME:syslog_hostname} CEF:%{INT:cef_version}\|%{STRINGDELIM:device_vendor}\|%{STRINGDELIM:device_product}\|%{STRINGDELIM:device_version}\|%{STRINGDELIM:device_event_class_id}\|%{STRINGDELIM:event_name}\|%{SEVERITY:severity}\|%{GREEDYDATA:message}
 ```
 ### +PATTERNS:
 ```
