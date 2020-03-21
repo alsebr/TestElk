@@ -54,7 +54,7 @@ STRINGDELIM [^\|]+
 >Severity is  a   string or integer and reflects the importance of the event. The valid string values are Unknown, Low, Medium, High, and Very-High. The valid integer values are 0-3=Low, 4-6=Medium, 7- 8=High, and 9-10=Very-High.
 
 Доавляем новый паттерн:  
-Unknown|Low|Medium|High|Very-High|10|[0-9]  
+SEVERITY Unknown|Low|Medium|High|Very-High|10|[0-9]
 Получаем:  
 ```%{SEVERITY:severity}```
 
@@ -77,7 +77,7 @@ GROK FILTER:
 +PATTERNS:
 ```
 STRINGDELIM [^\|]+
-SEVERITY Unknown|Low|Medium|High|Very-High|[0-9]
+SEVERITY Unknown|Low|Medium|High|Very-High|10|[0-9]
 ```
 OUT:
 ```
