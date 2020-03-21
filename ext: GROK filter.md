@@ -66,13 +66,13 @@ SEVERITY Unknown|Low|Medium|High|Very-High|10|[0-9]
  
 Здесь GROK пасует. Отдаем message на откуп Kv Filter    
 
-##Итого:  
-###IN:  
+## Итого
+### IN:  
 ```Oct 21 15:12:07 vnetidsemerg CEF:0|InfoTeCS|IDS|9.4.9-99999|1:2019401:27|ET POLICY Vulnerable
 Java Version 1.8.x Detected|2|cat=1 cn1=1234567 cn1Label=EventID cnt=1 cs1=bad-unknown cs1Label=IDSClass cs2=emerging-policy cs2Label=IDSGroup cs3= cs3Label=CVEID cs4=url,www.oracle.com/technetwork/java/javase/8u-relnotes-2225394.html cs4Label=ExternalRef cs5= cs5Label=IDSTags deviceExternalId=123456789 deviceFacility=Signature dmac=33:33:33:33:33:33 dpt=80 dst=199.199.199.199 proto=TCP rt=Oct 21 2019 15:12:05.750 MSK smac=00:00:00:00:00:00
 spt=00000 src=99.99.99.99
 ```
-###GROK FILTER:
+### GRK FILTER:
 ```%{SYSLOGTIMESTAMP:syslog_time} %{HOSTNAME:syslog_hostname} CEF:%{INT:cef_version}\|%{STRINGDELIM:device_vendor}\|%{STRINGDELIM:device_product}\|%{STRINGDELIM:device_version}\|%{STRINGDELIM:device_event_class_id}\|%{STRINGDELIM:event_name}\|%{SEVERITY:severity}\|%{GREEDYDATA:message}
 ```
 ###+PATTERNS:
