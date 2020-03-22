@@ -41,6 +41,6 @@
 ```
 Видимо это скан портов.  
 4. https://packettotal.com/ это подтверждает:  
-```192.168.0.3 scanned at least 15 unique ports of host 192.168.0.13 in 0m0s	```
+```192.168.0.3 scanned at least 15 unique ports of host 192.168.0.13 in 0m0s	```  
 5. И вот больше я ничего найти не смог =(   
 Конец  
