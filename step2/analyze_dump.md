@@ -10,11 +10,10 @@
 * 192.168.0.13
 Судя по адресации - виртуалки.  
 * 10.0.20.229 - видимо гипервизор. ICMP пакеты проскочили
-
-Из интересного:
-через GDVDTRK.RU(редиректит на google) ктото искал virustotal
+  
+Из интересного:  
+через GDVDTRK.RU(редиректит на google) ктото искал virustotal  
 3. Запускаем сурикату на дамп трафика, чистим мусор. Остается:
-
 ```
 03/09/2020-02:50:19.969481  [**] [1:2027863:3] ET INFO Observed DNS Query to .biz TLD [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 192.168.0.13:63428 -> 192.168.0.1:53
 03/09/2020-03:02:17.592703  [**] [1:2210045:2] SURICATA STREAM Packet with invalid ack [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.0.3:43470 -> 192.168.0.13:139
@@ -40,3 +39,4 @@
 03/09/2020-03:02:18.696609  [**] [1:2210045:2] SURICATA STREAM Packet with invalid ack [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.0.3:57290 -> 192.168.0.13:49155
 03/09/2020-03:02:18.696609  [**] [1:2210046:2] SURICATA STREAM SHUTDOWN RST invalid ack [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.0.3:57290 -> 192.168.0.13:49155
 ```
+Видимо это скан портов.
